@@ -4,9 +4,226 @@
   переключая тему
 */
 
+
+
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+
+  --accent-color: #FF8DCB;
+  --antiaccent-color: #353430;
+  --focus-color: #FFC2E6;
+
+  --bg-color: #fff1f7;
+
+  background-image: url(../images/cover-image-light.png);
+  background-color: var(--bg-color);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 1px solid #353430;
+  border-left: 1px solid #353430;
+  width: 25px;
+  height: 25px;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-top: 1px solid #353430;
+  border-right: 1px solid #353430;
+  width: 25px;
+  height: 25px;
+}
+
+@media (min-width: 768px) {
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+.header__theme-menu {
+  color: var(--antiaccent-color);
+}
+
+.page.theme_light .header__theme-menu-button:hover {
+  border-color: rgba(50, 49, 45, 0.40);
+}
+
+.page.theme_light .header__theme-menu-button:focus {
+  border: none;
+  border-bottom: 1px solid var(--antiaccent-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--antiaccent-color)
+}
+
+.header__title {
+  color: var(--focus-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+}
+
+.header__desc {
+  color: var(--antiaccent-color);
+  background-color: var(--accent-color);
+}
+
+.content__title {
+  color: var(--antiaccent-color);
+}
+
+.content__subtitle {
+  color: var(--antiaccent-color);
+  background-color: var(--accent-color);
+}
+
+.section__title {
+  color: var(--antiaccent-color);
+  background-color: var(--accent-color);
+}
+
+.section__info {
+  color: var(--antiaccent-color);
+}
+
+.section__link {
+  text-shadow: 2px 1px var(--accent-color);
+}
+
+.page.theme_light .section__link:hover {
+  border-bottom: 1px solid var(--antiaccent-color);
+}
+
+.page.theme_light .section__link:focus {
+  border: 1px solid var(--antiaccent-color);
+}
+
+.footer__title {
+  color: var(--focus-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #FF8DCB;
+    --antiaccent-color: #353430;
+    --focus-color: #FFC2E6;
+  
+    --bg-color: #fff1f7;
+  }
+
+  .decorated-zone::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    border-bottom: 1px solid #353430;
+    border-left: 1px solid #353430;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .decorated-zone::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-top: 1px solid #353430;
+    border-right: 1px solid #353430;
+    width: 25px;
+    height: 25px;
+  }
+  
+  @media (min-width: 768px) {
+    .decorated-zone::before {
+      top: 20px;
+      right: 20px;
+    }
+  
+    .decorated-zone::after {
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+  
+  .header__theme-menu {
+    color: var(--antiaccent-color);
+  }
+
+  .page.theme_auto .header__theme-menu-button:hover {
+    border-color: rgba(50, 49, 45, 0.40);
+  }
+
+  .page.theme_auto .header__theme-menu-button:focus {
+    border: none;
+    border-bottom: 1px solid var(--antiaccent-color);
+  }
+  
+  .header__theme-menu-button_active {
+    border: 1px solid var(--antiaccent-color)
+  }
+  
+  .header__title {
+    color: var(--focus-color);
+    text-shadow: 4px 4px 0px var(--accent-color);
+  }
+  
+  .header__desc {
+    color: var(--antiaccent-color);
+    background-color: var(--accent-color);
+  }
+  
+  .content__title {
+    color: var(--antiaccent-color);
+  }
+  
+  .content__subtitle {
+    color: var(--antiaccent-color);
+    background-color: var(--accent-color);
+  }
+  
+  .section__title {
+    color: var(--antiaccent-color);
+    background-color: var(--accent-color);
+  }
+  
+  .section__info {
+    color: var(--antiaccent-color);
+  }
+  
+  .section__link {
+    text-shadow: 2px 1px var(--accent-color);
+  }
+  
+  .footer__title {
+    color: var(--focus-color);
+    text-shadow: 2px 2px 0px var(--accent-color);
+  }
+
+  .page.theme_auto .section__link:hover {
+    border-bottom: 1px solid var(--antiaccent-color);
+  }
+
+  .page.theme_auto .section__link:focus {
+    border: 1px solid var(--antiaccent-color);
+  }
 }

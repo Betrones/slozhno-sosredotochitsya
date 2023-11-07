@@ -2,4 +2,295 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .page {
+    gap: 60px;
+  }
+}
+
+
+.header {
+  min-height: 100vh;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 20px
+  }
+}
+
+.header__theme-menu {
+  align-self: end;
+  margin: 65px 0;
+}
+
+@media (min-width: 768px) {
+  .header__theme-menu {
+    margin: 172px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    margin: 0 auto;
+  }
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 1024px) {
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+}
+
+.header__theme-menu-button {
+  background: none;
+  border: none;
+
+  line-height: 100%;
+
+  text-transform: lowercase;
+
+  min-width: 70px;
+  min-height: 26px;
+  text-align: center;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%;
+  text-transform: lowercase;
+
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .header__title {
+    align-self: start;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__title {
+    margin-block-start: 273px;
+  }
+}
+
+.header__desc {
+  margin-block: 55px;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+@media (min-width: 768px) {
+  .header__desc {
+    margin-block: 162px;
+    width: calc((100vw - 40px) / 2);
+    align-self: end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__desc {
+    margin-block: 114px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  margin-inline: 10px;
+}
+
+@media (min-width: 768px) {
+  .main {
+    gap: 80px;
+    margin-inline: 20px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .content:nth-child(2n-1){
+    flex-direction: row;
+  }
+}
+
+.content__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .content__title {
+    width: calc((100vw - 60px) / 3 );
+  }
+}
+
+@media (min-width: 1024px) {
+  .content__title {
+    max-width: 315px;
+  }
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .content:nth-child(2n-1) .content__list {
+    width: calc((100vw - 60px) / 3 * 2)
+  }
+}
+
+@media (min-width: 1024px) {
+  .content:nth-child(2n-1) .content__list {
+    max-width: 650px;
+    width: 100%;
+  }
+
+  .content:nth-child(2) .content__list {
+    flex-direction: row;
+  }
+
+  .content:nth-child(2) .content__list .content__list-item{
+    max-width: 315px;
+    width: 100%;
+  }
+}
+
+.content__subtitle {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.content__subtitle ~ .content__section > .section__title {
+  font-weight: 400;
+}
+
+.content__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.section__gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+@media (min-width: 768px) {
+  .section__gallery {
+    /* max-width: 100vw; */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+
+    grid-template-areas: 
+    "sun sun ice"
+    "tape books ice"
+    "tape street street"
+    ;
+  }
+}
+
+.gallery__pic {
+  /* max-width: 355px; */
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
+}
+@media (min-width: 768px) {
+  .gallery__pic:first-child{
+    grid-area: sun;
+    /* width: calc((100vw - 80px) / 3 * 2 + 20px); */
+  }
+
+  .gallery__pic:nth-child(2) {
+    grid-area: ice;
+    /* width: calc((100vw - 80px) / 3); */
+  }
+
+  .gallery__pic:nth-child(3) {
+    grid-area: tape;
+    /* width: calc((100vw - 80px) / 3); */
+  }
+
+  .gallery__pic:nth-child(4) {
+    grid-area: books;
+    /* width: calc((100vw - 80px) / 3); */
+  }
+
+  .gallery__pic:last-child {
+    grid-area: street;
+    /* width: calc((100vw - 80px) / 3 * 2 + 20px); */
+  }
+
+  /* .gallery__pic {
+    width: calc((100vw - 80px) / 3);
+    object-fit: fill;
+  } */
+
+  .gallery__pic {
+    max-width: initial;
+  }
+
+  .content:last-child .content__section {
+    gap: 20px;
+  }
+}
+
+.footer {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-transform: lowercase;
+}
+
+@media (min-width: 768px) {
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
