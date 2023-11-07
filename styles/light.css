@@ -131,6 +131,15 @@
     --bg-color: #fff1f7;
   }
 
+  .page {
+    background-image: url(../images/cover-image-light.png);
+    background-color: var(--bg-color);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
   .decorated-zone::after {
     content: "";
     position: absolute;
