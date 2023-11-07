@@ -169,11 +169,11 @@
     color: var(--antiaccent-color);
   }
 
-  .page.theme_auto .header__theme-menu-button:hover {
+  .page .header__theme-menu-button:hover {
     border-color: rgba(50, 49, 45, 0.40);
   }
 
-  .page.theme_auto .header__theme-menu-button:focus {
+  .page .header__theme-menu-button:focus {
     border: none;
     border-bottom: 1px solid var(--antiaccent-color);
   }
@@ -219,11 +219,11 @@
     text-shadow: 2px 2px 0px var(--accent-color);
   }
 
-  .page.theme_auto .section__link:hover {
+  .page .section__link:hover {
     border-bottom: 1px solid var(--antiaccent-color);
   }
 
-  .page.theme_auto .section__link:focus {
+  .page .section__link:focus {
     border: 1px solid var(--antiaccent-color);
   }
 }

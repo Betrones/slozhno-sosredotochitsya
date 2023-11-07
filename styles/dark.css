@@ -94,22 +94,22 @@
 }
 
 @media (prefers-color-scheme: dark) and (min-width: 768px) {
-  .page.theme_auto .header__bulb::before {
+  .page .header__bulb::before {
     top: 20px;
     right: 48px;
   }
 
-  .page.theme_auto .header__bulb::after {
+  .page .header__bulb::after {
     top: 28px;
     right: 28px;
   }
 
-  .page.theme_auto .decorated-zone::before {
+  .page .decorated-zone::before {
     top: 20px;
     right: 20px;
   }
 
-  .page.theme_auto .decorated-zone::after {
+  .page .decorated-zone::after {
     bottom: 20px;
     left: 20px;
   }
@@ -194,7 +194,7 @@
   background-position: center;
   }
 
-  .page.theme_auto .header__bulb::before {
+  .page .header__bulb::before {
     content: "rec";
     text-transform: uppercase;
     color: var(--accent-color);
@@ -207,7 +207,7 @@
     line-height: 25px;
   }
   
-  .page.theme_auto .header__bulb::after {
+  .page .header__bulb::after {
     content: "";
     width: 9px;
     height: 9px;
@@ -220,7 +220,7 @@
     right: 19px;
   }
   
-  .page.theme_auto .decorated-zone::after {
+  .page .decorated-zone::after {
     content: "";
     position: absolute;
     bottom: 10px;
@@ -231,7 +231,7 @@
     height: 25px;
   }
   
-  .page.theme_auto .decorated-zone::before {
+  .page .decorated-zone::before {
     content: "";
     position: absolute;
     top: 10px;
@@ -243,107 +243,107 @@
   }
   
   @media (min-width: 768px) {
-    .page.theme_auto .header__bulb::before {
+    .page .header__bulb::before {
       top: 20px;
       right: 48px;
     }
   
-    .page.theme_auto .header__bulb::after {
+    .page .header__bulb::after {
       top: 28px;
       right: 28px;
     }
   
-    .page.theme_auto .decorated-zone::before {
+    .page .decorated-zone::before {
       top: 20px;
       right: 20px;
     }
   
-    .page.theme_auto .decorated-zone::after {
+    .page .decorated-zone::after {
       bottom: 20px;
       left: 20px;
     }
   }
   
   @media (prefers-color-scheme: dark) and (min-width: 768px) {
-    .page.theme_auto .header__bulb::before {
+    .page .header__bulb::before {
       top: 20px;
       right: 48px;
     }
   
-    .page.theme_auto .header__bulb::after {
+    .page .header__bulb::after {
       top: 28px;
       right: 28px;
     }
   
-    .page.theme_auto .decorated-zone::before {
+    .page .decorated-zone::before {
       top: 20px;
       right: 20px;
     }
   
-    .page.theme_auto .decorated-zone::after {
+    .page .decorated-zone::after {
       bottom: 20px;
       left: 20px;
     }
   }
   
-  .page.theme_auto .header__theme-menu {
+  .page .header__theme-menu {
     color: var(--accent-color);
   }
 
-  .page.theme_auto .header__theme-menu-button:hover {
+  .page .header__theme-menu-button:hover {
     border-color: rgba(255, 0, 112, 0.40);
   }
 
-  .page.theme_auto .header__theme-menu-button:focus {
+  .page .header__theme-menu-button:focus {
     border: none;
     border-bottom: 1px solid var(--accent-color);
   }
   
-  .page.theme_auto .header__theme-menu-button_active {
+  .page .header__theme-menu-button_active {
     border: 1px solid var(--accent-color)
   }
   
-  .page.theme_auto .header__title {
+  .page .header__title {
     color: var(--focus-color);
     text-shadow: 4px 4px 0px var(--accent-color);
   }
   
-  .page.theme_auto .header__desc {
+  .page .header__desc {
     color: var(--antiaccent-color);
     background-color: var(--accent-color);
   }
   
-  .page.theme_auto .content__title {
+  .page .content__title {
     color: var(--accent-color);
   }
   
-  .page.theme_auto .content__subtitle {
+  .page .content__subtitle {
     color: var(--antiaccent-color);
     background-color: var(--accent-color);
   }
   
-  .page.theme_auto .section__title {
+  .page .section__title {
     color: var(--antiaccent-color);
     background-color: var(--accent-color);
   }
   
-  .page.theme_auto .section__info {
+  .page .section__info {
     color: var(--text-color);
   }
   
-  .page.theme_auto .section__link {
+  .page .section__link {
     text-shadow: 2px 1px var(--accent-color);
   }
 
-  .page.theme_auto .section__link:hover {
+  .page .section__link:hover {
     border-bottom: 1px solid var(--text-color);
   }
 
-  .page.theme_auto .section__link:focus {
+  .page .section__link:focus {
     border: 1px solid var(--text-color);
   }
   
-  .page.theme_auto .footer__title {
+  .page .footer__title {
     color: var(--focus-color);
     text-shadow: 2px 2px 0px var(--accent-color);
   }
