@@ -158,6 +158,12 @@
   }
 }
 
+.content__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .content__list {
   display: flex;
   flex-direction: column;
