@@ -5,8 +5,18 @@
 
 
 :root {
-  --accent-color: #FF0070;
-  --antiaccent-color: #000028;
+  --bg-accent-color: #FF0070;
+  --bg-accent-text-color: #000028;
+
   --focus-color: #DB00FF;
+  --focus-bg-color: #FF0070;
+
   --text-color: #F1B2CE;
+  --text-accent-color: #FF0070;
+  --text-accent-color-transparent: rgba(255, 0, 112, 0.40);
+
+  --bg-color: #000028;
+
+
+  --font: 'IBM Plex mono';
 }
